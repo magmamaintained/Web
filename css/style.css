@@ -296,10 +296,8 @@ footer {
 }
 
 
-@media only screen and (min-width: 1100px) {
-    .header-content {
-        margin-top: -7rem;
-    }
+@media only screen and (max-width: 1800px) {
+    
 
     .header-content h1 {
         font-size: 8rem;
@@ -309,5 +307,119 @@ footer {
         margin-left: 5rem;
     }
 
+    .header-content p {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-bottom: 3rem;
+        margin-left: 6.5rem;
+    }
 
+    .header-links {
+        margin-left: 5rem;
+    }
+}
+
+@media only screen and (max-width: 1600px) {
+    .header-content {
+        justify-content: flex-end;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .header-content h1 {
+        font-size: 6rem;
+        font-weight: 700;
+        margin-bottom: 3rem;
+        line-height: 6.5rem;
+        
+    }
+
+    .header-content p {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-bottom: 3rem;
+        margin-left: 1.5rem;
+    }
+
+    .header-links {
+
+    }
+
+}
+
+@media only screen and (max-width: 1500px) {
+    .header-content {
+        justify-content: flex-end
+    }
+
+    .header-content h1 {
+        font-size: 5rem;
+        font-weight: 700;
+        margin-bottom: 3rem;
+        line-height: 5.5rem;
+        
+    }
+
+    .header-content p {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-bottom: 3rem;
+    }
+
+    .header-links {
+        
+    }
+
+
+}
+
+@media only screen and (max-width: 1400px) {
+    .header-content {
+        justify-content: flex-end
+    }
+
+    .header-content h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 3rem;
+        line-height: 4.5rem;
+        
+    }
+
+    .header-content p {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-bottom: 3rem;
+    }
+
+    .header-logo {
+        height: 600px;
+        min-width: 600px;
+    }
+}
+
+@media only screen and (max-width: 1120px) {
+    .header-content {
+        justify-content: flex-end
+    }
+
+    .header-content h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 3rem;
+        line-height: 3.5rem;
+        
+    }
+
+    .header-content p {
+        font-size: 1.5rem;
+        font-weight: 400;
+        margin-bottom: 3rem;
+    }
+
+    .header-logo {
+        height: 500px;
+        min-width: 500px;
+        
+    }
 }

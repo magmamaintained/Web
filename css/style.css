@@ -57,13 +57,6 @@ nav {
     color: #333;
     text-decoration: none;
     transition: transform 0.3s ease;
-    margin-left: 1rem;
-  }
-  a:first-child {
-    margin-left: 0;
-  }
-  a:last-child {
-    margin-right: 0;
   }
   .nav-logo {
     font-size: 1.5rem;
@@ -80,7 +73,10 @@ nav {
     justify-content: space-between;
     align-items: center;
     flex-flow: row nowrap;
-    margin-right: 1rem;
+    .nav-image {
+      margin-left: 1rem;
+      margin-top: 0.5rem;
+    } 
   }
 }
 .button {
@@ -170,7 +166,8 @@ header {
 }
 .info {
   background-color: #fff;
-  height: fit-content;
+  height: auto;
+
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -225,24 +222,25 @@ header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  flex-flow: column nowrap;
+  flex-flow: column-reverse nowrap;
   border-radius: 0 8px 0 0;
   z-index: 1;
-  padding: 2rem 2rem;
+  padding: 2rem;
+  padding-bottom: 5rem;
   h2 {
     font-size: 2.5rem;
     font-weight: 700;
     margin-bottom: 1rem;
   }
   .news-item {
-    width: 90%;
+    width: 55%;
     height: auto;
     display: flex;
     flex-flow: column nowrap;
     position: relative;
     justify-content: flex-start;
     border: 1px solid #e9ecef;
-    border-radius: 20px;
+    border-radius: 16px;
     margin-bottom: 1rem;
     padding: 1rem 2rem;
     p {
@@ -258,7 +256,6 @@ header {
 }
 .faq {
   background-color: #fff;
-  width: 98%;
   height: fit-content;
   padding-bottom: 5rem;
   display: flex;
@@ -267,8 +264,8 @@ header {
   flex-flow: column nowrap;
   border-radius: 8px 0 0 0;
   z-index: 2;
-  padding-top: 2rem;
-  padding-left: 2rem;
+  padding: 2rem;
+  padding-bottom: 5rem;
   h2 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -289,6 +286,11 @@ header {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     details {
       cursor: pointer;
+      p {
+        margin: .5rem 0;
+        line-height: 1.8rem;
+        font-size: 1.3rem;
+      }
     }
     details:not([open]) > * {
       font-size: 1.5rem;
@@ -320,12 +322,29 @@ header {
   align-items: center;
   flex-flow: row nowrap;
   border-radius: 8px;
+  .kinetic-logo-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row nowrap;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 8px;
+    }
+  }
+  .kinetic-logo-container:hover {
+    filter: grayscale(60%);
+    transition: all 0.3s ease;
+  }
 }
 footer {
   background-color: var(--bg-color);
   padding: 1rem;
   margin-bottom: 1rem;
-  height: 10vh;
+  height: fit-content;
   display: flex;
   justify-content: space-evenly;
   align-items: center;

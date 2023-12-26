@@ -42,7 +42,8 @@ summary {
 }
 nav {
   padding: 1rem 0;
-  background-color: #e9ecef;
+  background: rgb(28,172,214);
+  background: linear-gradient(197deg, rgba(28,172,214,1) 0%, rgba(139,28,214,1) 32%, rgba(137,49,204,1) 53%, rgba(204,43,200,1) 76%, rgba(204,43,200,1) 100%);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,21 +53,16 @@ nav {
   z-index: 100;
   transition: all 0.1s ease;
   width: 100%;
-  margin-bottom: 0.4rem;
+  color: #fff;
   a {
-    color: #333;
+    color: #fff;
     text-decoration: none;
     transition: transform 0.3s ease;
   }
   .nav-logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #333;
     margin-left: 1rem;
-  }
-  .nav-logo:hover {
-    color: #333;
-    text-decoration: none;
   }
   .navigator-container {
     display: flex;
@@ -76,7 +72,7 @@ nav {
     .nav-image {
       margin-left: 1rem;
       margin-top: 0.5rem;
-    } 
+    }
   }
 }
 .button {
@@ -117,10 +113,14 @@ header {
   align-items: center;
   flex-flow: row nowrap;
   overflow: hidden;
-  .header-logo {
+  gap: 2rem;
+  
+  background: rgb(28,172,214);
+  background: linear-gradient(210deg, rgba(28,172,214,1) 0%, rgba(139,28,214,1) 11%, rgba(137,49,204,1) 20%, rgba(204,43,200,1) 35%, rgba(204,43,200,1) 100%);
+.header-logo {
     min-height: 300px;
     min-width: 300px;
-    height: 55%;
+    height: auto;
     width: 55%;
     background-color: var(--button-bg-color);
     border-radius: 3%;
@@ -139,16 +139,20 @@ header {
     align-items: center;
     flex-flow: column nowrap;
     margin-top: -12rem;
+    color: rgb(244, 236, 255);
+    
     h1 {
       font-size: 7rem;
       font-weight: 700;
       line-height: 6.5rem;
       text-align: center;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     }
     p {
       font-size: 1.5rem;
       font-weight: 400;
       margin-top: -4rem;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     }
     a {
       font-size: 1.5rem;
@@ -166,8 +170,7 @@ header {
 }
 .info {
   background-color: #fff;
-  height: auto;
-
+  height: fit-content;
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
@@ -215,10 +218,26 @@ header {
     text-align: center;
     margin: 0 auto;
   }
+  .info-card {
+    width: 350px;
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    img {
+      border-radius: 8px;
+    }
+  }
 }
 .news {
   background-color: #fff;
-  height: auto;
+  height: 55vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -256,16 +275,13 @@ header {
 }
 .faq {
   background-color: #fff;
-  height: fit-content;
-  padding-bottom: 5rem;
+  height: 100vh;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-flow: column nowrap;
   border-radius: 8px 0 0 0;
   z-index: 2;
-  padding: 2rem;
-  padding-bottom: 5rem;
   h2 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -287,7 +303,7 @@ header {
     details {
       cursor: pointer;
       p {
-        margin: .5rem 0;
+        margin: 0.5rem 0;
         line-height: 1.8rem;
         font-size: 1.3rem;
       }
@@ -296,27 +312,29 @@ header {
       font-size: 1.5rem;
       font-weight: 400;
       max-height: 3rem;
-      transition: max-height 0.3s ease-in-out, font-size 0.2s ease-in-out, font-wei;
+      transition: max-height 0.3s ease-in-out, font-size 0.2s ease-in-out,
+        font-wei;
     }
     details[open] > summary {
       font-size: 1.6rem;
       font-weight: 500;
       max-height: 1000px;
-      transition: max-height 0.3s ease-in-out, font-size 0.2s ease-in-out, font-weight 0.2s ease-in-out;
+      transition: max-height 0.3s ease-in-out, font-size 0.2s ease-in-out,
+        font-weight 0.2s ease-in-out;
     }
     details summary:hover {
-        font-size: 1.8rem;
-        font-weight: 500;
-        max-height: 1000px;
-        transition: font-size 0.05s linear, font-weight 0.05s linear;
-        }
+      font-size: 1.8rem;
+      font-weight: 500;
+      max-height: 1000px;
+      transition: font-size 0.05s linear, font-weight 0.05s linear;
+    }
   }
 }
 .partners {
   background-color: #fff;
-  padding: 1rem;
+  padding: 2rem 0;
   margin-bottom: 1rem;
-  height: auto;
+  height: 20vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -344,10 +362,79 @@ footer {
   background-color: var(--bg-color);
   padding: 1rem;
   margin-bottom: 1rem;
-  height: fit-content;
+  height: 33.33vh;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   flex-flow: row nowrap;
 }
 
+@media only screen and (max-width: 1650px) {
+  header {
+    .header-content {
+      margin-top: -11rem;
+      h1 {
+        font-size: 6rem;
+        line-height: 6.5rem;
+      }
+      p {
+        margin-top: -3.5rem;
+      }
+      a {
+        padding: 0.95rem 1.9rem;
+      }
+    }
+    .header-logo {
+      width: 50%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  header {
+    .header-content {
+      margin-top: -10rem;
+      h1 {
+        font-size: 5rem;
+        line-height: 5.5rem;
+      }
+      p {
+        margin-top: -3rem;
+        font-size: 1.3rem;
+      }
+      a {
+        padding: 0.85rem 1.7rem;
+      }
+    }
+    .header-logo {
+      width: 50%;
+    }
+  }
+}
+
+@media only screen and (max-width: 1250px) {
+  header {
+    background-image: url("../img/Logo_MD.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .header-logo {
+      display: none;
+    }
+    .header-content {
+      h1 {
+        font-size: 8rem;
+        line-height: 9.5rem;
+      }
+      p {
+        font-size: 3rem;
+        line-height: 3.5rem;
+        text-align: center;
+      }
+      a {
+        padding: 1.5rem 3rem;
+        font-size: 2rem;
+      }
+    }
+  }
+}

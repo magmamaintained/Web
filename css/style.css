@@ -6,6 +6,7 @@
   --button-bg-color: #007bff;
   --button-bg-hover-color: rgb(9, 210, 250);
   --button-txt-hover-color: #fff;
+
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -27,8 +28,16 @@ body {
   margin: 0;
   text-rendering: optimizeSpeed;
 }
-h1, h2, h3, h4, h5, h6, p, a, summary{
-  opacity: .85;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+summary {
+  opacity: 0.85;
 }
 a {
   color: #007bff;
@@ -45,7 +54,7 @@ section:not(.partners) {
   display: none;
 }
 nav {
-  height: 4rem;
+  height: 4.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,7 +64,12 @@ nav {
   z-index: 100;
   width: 100%;
   color: #fff;
-  background: linear-gradient(197deg,  rgba(137,49,204,.9) 10%,  rgba(139,28,214,.9) 30%, rgba(28,172,214,.9)  80%); 
+  background: linear-gradient(
+    197deg,
+    rgba(137, 49, 204, 0.9) 10%,
+    rgba(139, 28, 214, 0.9) 30%,
+    rgba(28, 172, 214, 0.9) 80%
+  );
   animation: scroll linear both;
   animation-range: 0 125vh; /* Only for some browsers */
   animation-timeline: scroll();
@@ -69,13 +83,16 @@ nav {
     font-size: 1.5rem;
     font-weight: 700;
     margin-left: 1rem;
+    width: 50px;
+    height: 50px;
+    margin-bottom: -0.3rem;
   }
   .navigator-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-flow: row nowrap;
-    margin-right: 1rem;;
+    margin-right: 1rem;
     .nav-image {
       margin-left: 1rem;
       margin-bottom: -0.3rem;
@@ -103,17 +120,30 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: center;
   flex-flow: row nowrap;
   overflow: hidden;
   gap: 2rem;
-  background: linear-gradient(210deg, rgb(166, 28, 235) 0%, rgb(119, 71, 241) 11%, rgb(105, 21, 222) 20%,  rgb(28, 143, 214) 35%, rgba(28,172,214,1) 60%); 
+  background: linear-gradient(
+    210deg,
+    rgb(166, 28, 235) 0%,
+    rgb(119, 71, 241) 11%,
+    rgb(105, 21, 222) 20%,
+    rgb(28, 143, 214) 35%,
+    rgba(28, 172, 214, 1) 60%
+  );
   border-radius: 0 0 2% 2%;
   .header-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
     min-height: 300px;
     min-width: 300px;
     height: auto;
-    width: 55%;
-    background-color: var(--button-bg-color);
+    max-height: 500px;
+    max-width: 55%;
+    width: auto;
     border-radius: 3%;
     margin-top: -7rem;
     margin-left: 2rem;
@@ -131,7 +161,7 @@ header {
     flex-flow: column nowrap;
     margin-top: -12rem;
     color: rgb(244, 236, 255);
-    
+
     h1 {
       font-size: 9rem;
       font-weight: 700;
@@ -233,7 +263,7 @@ header {
   flex-flow: column-reverse nowrap;
   border-radius: 0 8px 0 0;
   z-index: 1;
-  
+
   h2 {
     font-size: 4rem;
     font-weight: 700;
@@ -323,7 +353,6 @@ header {
   }
 }
 .partners {
-
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -358,7 +387,7 @@ footer {
   align-items: flex-end;
   flex-flow: row wrap;
   z-index: 9;
-  
+
   background-image: url("../img/footer-bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -376,7 +405,49 @@ footer {
     margin: 1.3rem;
   }
 }
-
+@media only screen and (min-width: 2000px) {
+  header {
+    .header-content {
+      margin-top: -12rem;
+      h1 {
+        font-size: 13rem !important;
+        line-height: 13.5rem;
+      }
+    }
+    .header-logo {
+      width: 50%;
+    }
+  }
+  .faq {
+    .faq-item {
+      width: 75%;
+      padding: 2rem 1.5rem;
+    }
+  }
+}
+@media only screen and (max-width: 1800px) {
+  header {
+    .header-content {
+      h1 {
+        font-size: 8rem;
+        line-height: 8.5rem;
+      }
+    }
+    .header-logo {
+      width: 60%;
+      img {
+        max-height: 1000px;
+        width: auto;
+      }
+    }
+  }
+  .faq {
+    .faq-item {
+      width: 75%;
+      padding: 2rem 1.5rem;
+    }
+  }
+}
 @media only screen and (max-width: 1650px) {
   header {
     .header-content {
@@ -401,7 +472,6 @@ footer {
       width: 75%;
       padding: 2rem 1.5rem;
     }
-  
   }
 }
 
@@ -432,10 +502,6 @@ footer {
 
 @media only screen and (max-width: 1250px) {
   header {
-    background-image: url("../img/Logo_MD.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
     .header-logo {
       display: none;
     }
@@ -456,7 +522,6 @@ footer {
     }
   }
   .partners {
-    
     height: 60vh;
     article {
       .kinetic-logo-container {
@@ -468,7 +533,7 @@ footer {
     flex-wrap: nowrap;
   }
 }
-@media only screen and (max-width: 1000px ) {
+@media only screen and (max-width: 1000px) {
   .news {
     .news-item {
       width: 75%;
@@ -478,12 +543,12 @@ footer {
 @media only screen and (max-width: 768px) {
   nav {
     height: 6rem;
-    font-size:0;
+    font-size: 0;
     .nav-image {
       width: 35px;
     }
   }
-  
+
   header {
     height: 100vh;
     .header-logo {
@@ -530,10 +595,9 @@ footer {
         transition: none !important;
         font-size: 2rem !important;
       }
-    
     }
   }
-    
+
   .partners {
     height: 30vh;
     article {
@@ -542,10 +606,17 @@ footer {
       }
     }
   }
-
 }
 @media only screen and (max-width: 650px) {
   header {
+    background: linear-gradient(
+      --dg-1250,
+      rgb(166, 28, 235) 0%,
+      rgb(119, 71, 241) 11%,
+      rgb(105, 21, 222) 20%,
+      rgb(28, 143, 214) 35%,
+      rgba(28, 172, 214, 1) 60%
+    ) !important;
     .header-content {
       h1 {
         font-size: 5rem;
@@ -569,7 +640,6 @@ footer {
     p {
       line-height: 2rem;
       font-size: 1rem;
-      
     }
   }
 }
@@ -599,7 +669,7 @@ footer {
       width: 80%;
     }
   }
-  
+
   footer {
     height: 600px;
     justify-content: center;
@@ -607,23 +677,28 @@ footer {
     align-content: flex-end;
     flex-wrap: wrap;
     text-align: center;
-    
+
     p {
       line-height: 2rem;
       font-size: 1rem;
     }
     li {
-      font-size: .9rem;
+      font-size: 0.9rem;
     }
   }
 }
 @media only screen and (max-width: 400px) {
-  .header-links {
-    flex-flow: column nowrap !important;
-    align-items: center !important;
-    gap: 1rem !important;
-    a {
-      padding: 150px 200px;
+  header {
+    .header-links {
+      flex-flow: column nowrap;
+      align-items: center;
+      gap: 1rem;
+    }
+    .header-content {
+      h1 {
+        font-size: 3rem;
+        line-height: 3.5rem;
+      }
     }
   }
 }
@@ -658,18 +733,34 @@ footer {
     background-color: var(--button-bg-hover-color);
     color: var(--button-text-hover-color);
   }
+  .invert {
+    filter: invert(1);
+  }
   nav {
-    background: linear-gradient(197deg,  rgba(57, 9, 77, 0.9) 11%,  rgba(37, 22, 72, .9) 30%, rgba(34, 8, 72, .9) 54%, rgba(9, 51, 71, .9) 78%, rgba(9, 59, 67, .9) 86%); 
+    background: linear-gradient(
+      197deg,
+      rgba(57, 9, 77, 0.9) 11%,
+      rgba(37, 22, 72, 0.9) 30%,
+      rgba(34, 8, 72, 0.9) 54%,
+      rgba(9, 51, 71, 0.9) 78%,
+      rgba(9, 59, 67, 0.9) 86%
+    );
     animation: dark-scroll linear both;
-    animation-range: 0 150vh; 
+    animation-range: 0 150vh;
     animation-timeline: scroll();
-    
   }
   .nav-logo {
     color: var(--text-color);
   }
   header {
-    background: linear-gradient(210deg, rgb(57, 9, 77) 0%, rgb(37, 22, 72) 11%, rgb(34, 8, 72) 20%, rgb(9, 51, 71) 35%, rgb(9, 59, 67) 60%);
+    background: linear-gradient(
+      210deg,
+      rgb(57, 9, 77) 0%,
+      rgb(37, 22, 72) 11%,
+      rgb(34, 8, 72) 20%,
+      rgb(9, 51, 71) 35%,
+      rgb(9, 59, 67) 60%
+    );
   }
   .header-content {
     color: var(--text-color);
@@ -689,16 +780,26 @@ footer {
   footer {
     background-image: url("../img/footer-bg-dark.svg");
   }
-  
 }
 @keyframes dark-scroll {
   to {
-    background: linear-gradient(197deg,  rgba(57, 9, 77, 0.5) 11%,  rgba(37, 22, 72, .5) 30%, rgba(34, 8, 72, .5) 54%, rgba(9, 51, 71, .5) 78%, rgba(9, 59, 67, .5) 86%);  
+    background: linear-gradient(
+      197deg,
+      rgba(57, 9, 77, 0.5) 11%,
+      rgba(37, 22, 72, 0.5) 30%,
+      rgba(34, 8, 72, 0.5) 54%,
+      rgba(9, 51, 71, 0.5) 78%,
+      rgba(9, 59, 67, 0.5) 86%
+    );
   }
 }
 @keyframes scroll {
   to {
-    
-    background: linear-gradient(197deg,  rgba(137,49,204,.5) 10%,  rgba(139,28,214,.5) 30%, rgba(28,172,214,.5)  80%); 
+    background: linear-gradient(
+      197deg,
+      rgba(137, 49, 204, 0.5) 10%,
+      rgba(139, 28, 214, 0.5) 30%,
+      rgba(28, 172, 214, 0.5) 80%
+    );
   }
 }

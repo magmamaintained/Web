@@ -59,19 +59,19 @@ nav {
   justify-content: space-between;
   align-items: center;
   flex-flow: row nowrap;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 100;
   width: 100%;
   color: #fff;
   background: linear-gradient(
     197deg,
-    rgba(137, 49, 204, 0.9) 10%,
-    rgba(139, 28, 214, 0.9) 30%,
-    rgba(28, 172, 214, 0.9) 80%
+    rgba(143, 204, 230, 0) 10%,
+    rgba(124, 253, 253, 0) 30%,
+    rgba(138, 224, 250, 0) 80%
   );
   animation: scroll linear both;
-  animation-range: 0 125vh; /* Only for some browsers */
+  animation-range: 100vh 130vh; /* Only for some browsers */
   animation-timeline: scroll();
 
   a {
@@ -113,8 +113,8 @@ nav {
   color: var(--button-text-hover-color);
 }
 header {
+  
   background-color: #fff;
-  margin-top: -4rem;
   height: 125vh;
   width: 100%;
   display: flex;
@@ -739,14 +739,14 @@ footer {
   nav {
     background: linear-gradient(
       197deg,
-      rgba(57, 9, 77, 0.9) 11%,
-      rgba(37, 22, 72, 0.9) 30%,
-      rgba(34, 8, 72, 0.9) 54%,
-      rgba(9, 51, 71, 0.9) 78%,
-      rgba(9, 59, 67, 0.9) 86%
+      rgba(57, 9, 77, 0.0) 11%,
+      rgba(37, 22, 72, 0.0) 30%,
+      rgba(34, 8, 72, 0.0) 54%,
+      rgba(9, 51, 71, 0.0) 78%,
+      rgba(9, 59, 67, 0.0) 86%
     );
     animation: dark-scroll linear both;
-    animation-range: 0 150vh;
+    animation-range: 100vh 130vh;
     animation-timeline: scroll();
   }
   .nav-logo {

@@ -1,6 +1,6 @@
 ---
-import Header from '../components/Header.astro';
-import FAQ from '../components/FAQ.astro';
+import Header from './components/Header.astro';
+import FAQ from './components/FAQ.astro';
 interface Props {
 	title: string;
 }
@@ -14,7 +14,7 @@ const { title } = Astro.props;
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="stylesheet" href="node_modules/bootstrap5/src/css/bootstrap.min.css">
+		<link rel="stylesheet" href="bootstrap.min.css">
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>{title}</title>
 	</head>

@@ -2,11 +2,11 @@
 import Card from './Card.astro'
 
 ---
-<section>
-    <article class="px-2">
+<section class="container-fluid">
+    <article class="px-2 pt-5">
         <div class="row d-flex justify-content-center gap-2 g-0">
             <Card title='About' body='Magma Maintained is a fork of the popular Magma project. We aim to provide a more stable and secure version of Magma.' href='https://magmafoundation.org'/>
-            <Card title='Installation' body='Download the latest version on the discord server. Here we provide support for this software and it is one of the fastest ever on the mod loaders' href='https://discord.gg/WKkke2F6pU'/>
+            <Card title='Installation' body='Download the latest version on the discord server. Here we provide support for this software and it is one of the fastest ever on the hybrid servers.' href='https://discord.gg/WKkke2F6pU'/>
             <Card title='License' body='Licensed under the GNU License. This means everyone can use, share and modify Magma Maintained. ' href='https://www.gnu.org/licenses/gpl-3.0.html'/>
         </div>
     </article>
@@ -17,18 +17,14 @@ import Card from './Card.astro'
         height: fit-content;
     }
     section {
-        background: linear-gradient(0deg, rgb(0, 0, 0) 0%, rgbrgba(32, 32, 32, 0)%);
-        height: 50vh;
+        background: url('img/puntos.png');
+        height: 45vh;
     }
 
     @media (max-width: 768px) {
         section {
-            height: 70vh;
+            height: fit-content;
         }
     }
-    @media (max-width: 512px) {
-        section {
-            height: 80vh;
-        }
-    }
+    
 </style>

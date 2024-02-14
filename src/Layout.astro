@@ -4,8 +4,6 @@ import Header from './components/Header.astro';
 import Info from './components/Info.astro';
 import Footer from './components/Footer.astro';
 import FAQ from './components/FAQ.astro';
-import News from './components/News.astro';
-import NewsSection from './components/NewsSection.astro';
 interface Props {
 	title: string;
 }
@@ -30,10 +28,7 @@ const { title } = Astro.props;
 			<Header/>
 			<Info/>
 			<FAQ/>
-			<NewsSection>
-				<News/>
-				
-			</NewsSection>
+
 		</main>
 		<Footer/>
 		

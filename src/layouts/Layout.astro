@@ -1,0 +1,86 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<!-- SEO -->
+		<!-- ---------------------------------------------------------------------- -->
+		<meta name="description" content="Magma Maintained is a fork of the Magma hybrid server for Minecraft. It allows you to play with mods and plugins at the same time" />
+		<meta name="keywords" content="Magma, magma maintained, minecraft magma, minecraft, mods, plugins, mod, plugin, mc, hybrid server, hybrid loader, spigot, paper, forge, neoforge, neoforged, fabric, latest, version, modified, server software, server, minecraft server, free, performance, optimization, magma foundation, magmafoundation, magmamaintained, magma block, bloque de magma, servidor, gratis, rendimiento, comunidad, purpur, add-ons, addon, plug in, plug-in, plugins" />
+		<meta name="author" content="TonimatasDEV" />
+		<meta name="robots" content="index, follow" />
+		<meta name="revisit-after" content="1 days" />
+		<meta name="language" content="English" />
+		<meta name="publisher" content="TonimatasDEV" />
+
+		<!-- Open Graph / Facebook -->
+		<!-- 
+		<meta property="og:title" content="Título de tu página">
+		<meta property="og:description" content="Descripción de tu página">
+		<meta property="og:url" content="URL_de_tu_pagina">
+		<meta property="og:image" content="URL_de_la_imagen">
+ 		-->
+
+		<!-- Twitter -->
+		<!--
+		<meta property="twitter:title" content="Título de tu página">
+		<meta property="twitter:description" content="Descripción de tu página">
+		<meta property="twitter:url" content="URL_de_tu_pagina">
+		<meta property="twitter:image" content="URL_de_la_imagen">
+		-->
+		<!-- ---------------------------------------------------------------------- -->
+		<!-- Mobile -->
+		<meta name="theme-color" content="#080712" />
+
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="/styles.css" />
+		
+
+		<title>{title}</title>
+	</head>
+	<body>
+		
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--color-primary: #080712;
+		--color-secondary: #161B33;
+		--color-secondary-faq: rgba(22, 27, 51, 0.3);
+		--color-secondary-hover: #424c8d;
+		--color-border-accent: #7B79F8;
+		--color-gradient-accent: linear-gradient(90deg, #7B79F8 0%, #E28EFF 100%);
+		--radial-gradient-accent: radial-gradient(50% 50% at 50% 50%, #474595 0%, #e38eff00 100%);
+		--color-text: #FFFFFF;
+		--opacity-50: 0.5;
+		--opacity-30: 0.3;
+		--opacity-20: 0.2;
+		--opacity-10: 0.1;
+		--text-h2: 25px; 
+		--text-body: 20px;
+		--text-h2-weight: 700;
+		--text-body-weight: 400;
+		--text-h2-line-height: 1.2;
+		--text-body-line-height: 1.5;
+	}
+
+	html, body {
+		margin: 0;
+		padding: 0;
+		font-family: 'Poppins', sans-serif;
+		background-color: var(--color-primary);
+		color: var(--color-text);
+		min-height: 100vh;
+	}
+
+</style>
+

@@ -1,0 +1,13 @@
+  @font-face {
+    font-family: "BespokeStencil-Bold";
+    src: url("fonts/BespokeStencil-Bold.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Nunito-Bold";
+    src: url("fonts/Nunito-Bold.woff2") format("woff2");
+  }
+  @font-face {
+    font-family: "Nunito-Medium";
+    src: url("fonts/Nunito-Medium.woff2") format("woff2");
+  }

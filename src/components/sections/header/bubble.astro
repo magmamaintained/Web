@@ -1,0 +1,35 @@
+---
+interface Props {
+	opacity: string;
+  left?: string;
+  top?: string;
+}
+const opacity = Astro.props.opacity || '1';
+const left = Astro.props.left || '0';
+const top = Astro.props.top || '0';
+
+
+---
+
+<div class="my-circle"></div>
+<style define:vars={{ opacity, left, top}}>
+    
+    .my-circle {
+      max-width: 60px;
+      width: 60px;
+      height: 60px;
+      background-color: var(--color-secondary);
+      opacity: var(--opacity);
+      border-radius: 50%;
+      position: absolute;
+      top: var(--top);
+      left: var(--left);
+      z-index: 1;
+    }
+    @media (max-width: 1200px) {
+      .my-circle {
+        display: none;
+      }
+    }
+    
+</style>

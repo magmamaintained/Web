@@ -1,10 +1,30 @@
 ---
-import Layout from '../Layout.astro';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/sections/header.astro';
+import Warning from '../components/sections/lines/warning.astro';
+import Additional from '../components/sections/lines/additional.astro';
+import Error from '../components/sections/lines/error.astro';
+import Success from '../components/sections/lines/success.astro';
+import Info from '../components/sections/info.astro';
+import Footer from '../components/sections/footer.astro';
+import Download from '../components/sections/download.astro';
+import FAQ from '../components/sections/faq.astro';
 ---
 
-<Layout title="Magma Maintained"/>
+<Layout title="Magma Maintained">
+	<Header />
+	<Additional msg="The page is still being developed. Please be patient. Suggestions are allowed on our Discord."/>
+	<main class="antialiased">
+		<Info />
+		<FAQ />
+		<Download />
+		<Footer />
+	</main>
+</Layout>
 
-
-<style >
-	
+<style>
+	html {
+		scroll-behavior: smooth;
+		overflow-x: hidden;
+	}
 </style>

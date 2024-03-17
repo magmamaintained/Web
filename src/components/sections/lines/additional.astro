@@ -1,0 +1,11 @@
+---
+interface msg {
+    msg: string;
+}
+
+const msg = Astro.props.msg;
+---
+
+<div class="w-full text-center py-2 border-y-[2px] bg-opacity-40 my-1 border-blue-500 bg-blue-300">
+    <h4 ><span class="n-bold">Info: </span><span class="n-medium "> { msg } </span></h4>
+</div>

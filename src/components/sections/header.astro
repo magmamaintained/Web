@@ -1,0 +1,35 @@
+---
+import HeaderBg from "./header/header-bg.astro";
+---
+
+<header class="b-bold antialiased">
+    <HeaderBg />
+    <div class="flex flex-col items-center justify-center h-[100vh] md:gap-20 sm:gap-16 gap-12">
+        <h1 class="text-6xl sm:text-8xl md:text-9xl b-bold text-center -mt-32 tracking-tighter">Magma <br>Maintained</h1>
+
+        <div class="flex flex-col lg:flex-row w-min justify-center lg:gap-48 gap-10 n-bold md:text-5xl sm:text-3xl text-xl text-center">
+            <a href="https://discord.com/invite/zhqAz5BcJe">
+                <div class="download-btn-1 md:w-[310px] md:h-[75px] sm:w-[200px] sm:h-[60px] h-[50px] w-[120px] rounded-xl flex items-center justify-center">Download</div>
+            </a>
+            <a href="https://discord.com/invite/zhqAz5BcJe">
+                <div class="support-btn-1 md:w-[310px] md:h-[75px] sm:w-[200px] sm:h-[60px] h-[50px] w-[120px] rounded-xl flex items-center justify-center">Discord</div>
+            </a>
+        </div>
+    </div>
+</header>
+
+<style>
+    header {
+        min-height: 100vh;
+    }
+    
+    .download-btn-1 {
+        background: var(--color-gradient-accent); 
+    }
+
+    .support-btn-1 {
+        border: 2px solid var(--color-border-accent);
+        color: var(--color-border-accent);
+        
+    }
+</style>

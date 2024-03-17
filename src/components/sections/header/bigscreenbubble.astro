@@ -1,0 +1,34 @@
+---
+interface Props {
+	opacity: string;
+  left?: string;
+  top?: string;
+}
+const opacity = Astro.props.opacity || '1';
+const left = Astro.props.left || '0';
+const top = Astro.props.top || '0';
+
+
+---
+
+<div class="mi-circulo"></div>
+<style define:vars={{ opacity, left, top }}>
+    
+    .mi-circulo {
+      width: 55px;
+      height: 55px;
+      background-color: var(--color-secondary);
+      opacity: var(--opacity);
+      border-radius: 50%;
+      position: absolute;
+      top: var(--top);
+      left: var(--left);
+      z-index: 0;
+    }
+    @media (max-width: 1400px) {
+      .mi-circulo {
+        display: none;
+      }
+    }
+    
+</style>

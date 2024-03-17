@@ -1,0 +1,19 @@
+@import url(fonts.css);
+
+body {
+  font-family: "Nunito-Medium", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.b-bold {
+  font-family: "BespokeStencil-Bold";
+}
+
+.n-bold {
+  font-family: "Nunito-Bold";
+}
+
+.n-medium {
+  font-family: "Nunito-Medium";
+}

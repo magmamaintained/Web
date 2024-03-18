@@ -11,7 +11,7 @@
     </article>
     <article class="">
         <div class="">
-            <div class="rounded-xl sm:w-[500px] sm:h-[auto] w-[100px] img">img</div>
+            <div class="rounded-xl sm:w-[500px] sm:h-[auto] w-[100px]"> <div class="radial-gradient-accent">.</div> </div>
         </div>
     </article>
 </section>
@@ -24,8 +24,14 @@
         background: var(--color-gradient-accent); 
     }
     
+    .radial-gradient-accent {
+        width: 100px;
+        height: 100px;
+        background: radial-gradient(circle, var(--color-gradient-accent) 0%, transparent 100%);
+    }
+
     @media (max-width: 768px) {
-        .img {
+        .d-hidden {
             display: none;
         }
     }

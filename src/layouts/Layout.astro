@@ -14,35 +14,50 @@ const { title } = Astro.props;
 		<!-- ---------------------------------------------------------------------- -->
 		<meta name="description" content="Magma Maintained is a fork of the Magma hybrid server for Minecraft. It allows you to play with mods and plugins at the same time" />
 		<meta name="keywords" content="Magma, magma maintained, minecraft magma, minecraft, mods, plugins, mod, plugin, mc, hybrid server, hybrid loader, spigot, paper, forge, neoforge, neoforged, fabric, latest, version, modified, server software, server, minecraft server, free, performance, optimization, magma foundation, magmafoundation, magmamaintained, magma block, bloque de magma, servidor, gratis, rendimiento, comunidad, purpur, add-ons, addon, plug in, plug-in, plugins" />
-		<meta name="author" content="TonimatasDEV" />
+		<meta name="author" content="MiauDona" />
 		<meta name="robots" content="index, follow" />
 		<meta name="revisit-after" content="1 days" />
 		<meta name="language" content="English" />
 		<meta name="publisher" content="TonimatasDEV" />
 
 		<!-- Open Graph / Facebook -->
-		<!-- 
-		<meta property="og:title" content="Título de tu página">
-		<meta property="og:description" content="Descripción de tu página">
-		<meta property="og:url" content="URL_de_tu_pagina">
-		<meta property="og:image" content="URL_de_la_imagen">
- 		-->
+		
+		<meta property="og:title" content="Magma maintained">
+		<meta property="og:description" content="Play Minecraft with mods and plugins now">
+		<meta property="og:url" content="https://magmamaintained.org/">
+		<meta property="og:image" content="./favicon.webp">
+ 		
 
 		<!-- Twitter -->
-		<!--
-		<meta property="twitter:title" content="Título de tu página">
-		<meta property="twitter:description" content="Descripción de tu página">
-		<meta property="twitter:url" content="URL_de_tu_pagina">
-		<meta property="twitter:image" content="URL_de_la_imagen">
-		-->
+		<meta property="twitter:title" content="Magma maintained">
+		<meta property="twitter:description" content="Play Minecraft with mods and plugins now">
+		<meta property="twitter:url" content="https://magmamaintained.org/">
+		<meta property="twitter:image" content="./favicon.webp">
+		
 		<!-- ---------------------------------------------------------------------- -->
 		<!-- Mobile -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="apple-mobile-web-app-title" content="Magma Maintained" />
+		<meta name="application-name" content="Magma Maintained" />
+
+		<!-- PWA -->
+		<link rel="manifest" href="/manifest.webmanifest" />
+		<link rel="apple-touch-icon" href="/favicon.webp" />
+		<link rel="apple-touch-icon" sizes="152x152" href="/favicon.webp" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/favicon.webp" />
+		
+		<meta name="msapplication-TileColor" content="#080712" />
+		<meta name="msapplication-TileImage" content="/favicon.webp" />
+		<meta name="msapplication-config" content="/browserconfig.xml" />
+
+		<!-- Theme -->
 		<meta name="theme-color" content="#080712" />
 
+		<!-- Viewport -->
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.webp" />
 		<link rel="stylesheet" href="/styles.css" />
-		
 
 		<title>{title}</title>
 	</head>
